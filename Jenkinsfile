@@ -3,12 +3,12 @@ pipeline {
     stages {
       stage('SCM Checkout') {
         steps {
-           checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/sridhar-modalavalasa/Ansible-web-app.git']]])  
+           checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/satyam19arya/ansible-project.git']]])  
         }
       }  
       stage('Execute Ansible') {
         steps {
-           ansiblePlaybook credentialsId: 'ubuntu-slaves-key', disableHostKeyChecking: true, installation: 'ansible-copsc', inventory: 'hosts', playbook: 'web-app.yml'
+           ansiblePlaybook credentialsId: 'ubuntu-slaves-key', disableHostKeyChecking: true, installation: 'ansible-master', inventory: 'hosts', playbook: 'install_nginx.yml'
         }  
       }
     }
