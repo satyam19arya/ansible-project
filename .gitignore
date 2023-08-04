@@ -1,0 +1,3 @@
+ec2_setup/*terraform
+ec2_setup/.terraform.lock.hcl
+ec2_setup/terraform.tfstate
