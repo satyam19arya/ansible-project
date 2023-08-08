@@ -5,4 +5,3 @@ server2 ansible_host=54.243.9.11
 [servers:vars]
 ansible_python_interpreter=/usr/bin/python3
 ansible_user=ubuntu
-ansible_ssh_private_key_file=/home/ubuntu/keys/ansible.pem
