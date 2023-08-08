@@ -12,6 +12,20 @@ pipeline {
         }  
       }
     }
+    post {
+      always {
+        echo 'This will always run'
+      }
+      success {
+        echo 'This will run only if successful'
+      }
+      failure {
+        echo 'This will run only if failed'
+      }
+      unstable {
+        echo 'This will run only if the run was marked as unstable'
+      }
+    }
 }
 
 // pipeline {
@@ -50,5 +64,19 @@ pipeline {
 //                 sh "docker run -d --name node-app -p 8000:8000 node-app"
 //             }
 //         }
+//     }
+//     post {
+//       always {
+//         echo 'This will always run'
+//       }
+//       success {
+//         echo 'This will run only if successful'
+//       }
+//       failure {
+//         echo 'This will run only if failed'
+//       }
+//       unstable {
+//         echo 'This will run only if the run was marked as unstable'
+//       }
 //     }
 // }
