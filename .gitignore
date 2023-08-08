@@ -1,3 +1,4 @@
 ec2_setup/*terraform
 ec2_setup/.terraform.lock.hcl
 ec2_setup/terraform.tfstate
+ec2_setup/terraform.tfstate.backup
