@@ -14,16 +14,13 @@ pipeline {
     }
     post {
       always {
-        echo 'This will always run'
+        echo 'Pipeline execution completed'
       }
       success {
-        echo 'This will run only if successful'
+        echo 'Successfully executed the ansible playbook'
       }
       failure {
-        echo 'This will run only if failed'
-      }
-      unstable {
-        echo 'This will run only if the run was marked as unstable'
+        echo 'Failed to execute the ansible playbook'
       }
     }
 }
@@ -67,16 +64,13 @@ pipeline {
 //     }
 //     post {
 //       always {
-//         echo 'This will always run'
+//         echo 'Pipeline execution completed'
 //       }
 //       success {
-//         echo 'This will run only if successful'
+//         echo 'Successfully executed the pipeline'
 //       }
 //       failure {
-//         echo 'This will run only if failed'
-//       }
-//       unstable {
-//         echo 'This will run only if the run was marked as unstable'
+//         echo 'The pipeline is failed'
 //       }
 //     }
 // }
